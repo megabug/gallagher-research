@@ -74,11 +74,11 @@ The same devices usually support replaying the card data over the air to a reade
 
 This overview assumes that you are an authorised person wanting to secure access to a Gallagher-secured site (i.e. as part of a facility security team).
 
-The attacks given in this research mainly come down to the use of weak RFID card formats and settings. As outlined by Gallagher, the only form of Mifare-based credential that is currently considered secure against attack is the Mifare DESFire or Mifare Plus card **with** a non-default Mifare site key. (There are non-Mifare credentials that are also considered secure, such as PIV or FIDO-based ones).
+The attacks given in this research mainly come down to the use of weak RFID card formats and settings. As outlined by Gallagher, the only form of MIFARE-based credential that is currently considered secure against attack is the MIFARE DESFire or MIFARE Plus card **with** a non-default MIFARE site key. (There are non-MIFARE credentials that are also considered secure, such as PIV or FIDO-based ones).
 
-If other forms of card (i.e. Cardax LF or Mifare Classic) are in use, it is trivial to bypass the protection (if any) the card attempts to mount against an illegitate reader from reading the card credential data.
+If other forms of card (i.e. Cardax LF or MIFARE Classic) are in use, it is trivial to bypass the protection (if any) the card attempts to mount against an illegitate reader from reading the card credential data.
 
-If a Mifare DESFire or Mifare Plus card is in use on a site *but* the default Mifare site key is used, then it is still possible, with knowledge of this default site key, to read card credential data from the cards.
+If a MIFARE DESFire or MIFARE Plus card is in use on a site *but* the default MIFARE site key is used, then it is still possible, with knowledge of this default site key, to read card credential data from the cards.
 
 Gallagher provides resources to system operators and installers looking to secure their system:
 

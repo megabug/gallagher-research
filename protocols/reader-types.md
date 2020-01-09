@@ -15,8 +15,8 @@ These types are used in certain protocol messages to indicate reader (and implic
 | `0x84` | ? | ? | ? | ? |
 | `0xF5` | (Facility code list?) | ? | ([4bit RC] [2B FC])*16 [2B CRC (little-endian)] |
 | `0xF6` | ? | ? | ? | ? |
-| `0xF7` | Mifare extended data | ? | [see below](#0xF7-data-format) |
-| `0xF8` | Mifare Enhanced Security | ? | [see below](#0xF8-data-format) |
+| `0xF7` | MIFARE extended data | ? | [see below](#0xF7-data-format) |
+| `0xF8` | MIFARE Enhanced Security | ? | [see below](#0xF8-data-format) |
 | `0xF9` | ? | "Unknown" | ? |
 | `0xFA` | ? | Data Low | ? |
 | `0xFB` | ? | Data High | ? |
@@ -49,12 +49,12 @@ CRC:
 
 Subtype:
 
-* Bits 0-3: Mifare card type
-  - 0b00 = Mifare Classic
-  - 0b01 = Mifare Plus (in SL3)
-  - 0b10 = Mifare DESFire
+* Bits 0-3: MIFARE card type
+  - 0b00 = MIFARE Classic
+  - 0b01 = MIFARE Plus (in SL3)
+  - 0b10 = MIFARE DESFire
 
-* Bit 4: ? (seen 0 for Mifare Classic, 1 otherwise)
+* Bit 4: ? (seen 0 for MIFARE Classic, 1 otherwise)
 
 * Bit 5: card was proximity checked
 

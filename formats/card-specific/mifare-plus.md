@@ -1,22 +1,22 @@
-# Mifare Plus
+# MIFARE Plus
 
 ## About
 
-The second of the Mifare card range supported by the Gallagher system was the [Mifare Plus](https://www.nxp.com/products/rfid-nfc/mifare-hf/mifare-plus:MC_57609).
+The second of the MIFARE card range supported by the Gallagher system was the [MIFARE Plus](https://www.nxp.com/products/rfid-nfc/mifare-hf/mifare-plus:MC_57609).
 
-This card acts very similarly to a Mifare Classic card except for one key area: the security subsystem. The CRYPTO1-based encryption and the 6 byte keys have been replaced with 128 bit AES in a backwards-compatible way.
+This card acts very similarly to a MIFARE Classic card except for one key area: the security subsystem. The CRYPTO1-based encryption and the 6 byte keys have been replaced with 128 bit AES in a backwards-compatible way.
 
 
 ## Sectors
 
-The actual data held on a Mifare Plus card is identical to that of a Mifare Classic card, so refer to [that](mifare-classic.md) documentation for more on this.
+The actual data held on a MIFARE Plus card is identical to that of a MIFARE Classic card, so refer to [that](mifare-classic.md) documentation for more on this.
 
 
 ## Keys
 
-The area that *has* changed is the keys. The fixed keys used previously have been replaced with diversified keys generated from the card's serial number (CSN) and a site-specific *Mifare Site Key*.
+The area that *has* changed is the keys. The fixed keys used previously have been replaced with diversified keys generated from the card's serial number (CSN) and a site-specific *MIFARE Site Key*.
 
-The algorithm used to diversify the keys is the same as that used in the Mifare DESFire cards, so refer to [that](mifare-desfire.md) documentation for the algorithm.
+The algorithm used to diversify the keys is the same as that used in the MIFARE DESFire cards, so refer to [that](mifare-desfire.md) documentation for the algorithm.
 
 The inputs used for the algorithm to diversify the keys for each sector are as follows:
 

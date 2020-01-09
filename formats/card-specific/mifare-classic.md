@@ -1,13 +1,13 @@
-# Mifare Classic
+# MIFARE Classic
 
 ## About
 
-The first of the Mifare card range supported by the Gallagher system was the [Mifare Classic](https://www.nxp.com/products/rfid-nfc/mifare-hf/mifare-classic:MC_41863).
+The first of the MIFARE card range supported by the Gallagher system was the [MIFARE Classic](https://www.nxp.com/products/rfid-nfc/mifare-hf/mifare-classic:MC_41863).
 
 
 ## Sectors
 
-The cards will have a valid [Mifare Application Directory](https://www.nxp.com/docs/en/application-note/AN10787.pdf). The following application IDs are used by the Gallagher system:
+The cards will have a valid [MIFARE Application Directory](https://www.nxp.com/docs/en/application-note/AN10787.pdf). The following application IDs are used by the Gallagher system:
 
 * `0x4811`: [Card Application Directory](../cad.md) (CAD) sector
 * `0x4812`: Site-specific card data sector (see below).
@@ -33,11 +33,11 @@ Contains the literal string <tt>www&#x2e;cardax.com&nbsp;&nbsp;</tt> (note the 2
 
 ### Block 2
 
-If enabled for the site, contains a 16 byte [Mifare Enhanced Security](../mes.md) block. Otherwise, should contain all zeroes. However, cards have been seen in the field that appear to contain uninitialised data from the stack during the encoding process!
+If enabled for the site, contains a 16 byte [MIFARE Enhanced Security](../mes.md) block. Otherwise, should contain all zeroes. However, cards have been seen in the field that appear to contain uninitialised data from the stack during the encoding process!
 
 ### Block 3
 
-Block 3 is set in the usual Mifare-specific way, with the following settings:
+Block 3 is set in the usual MIFARE-specific way, with the following settings:
 
 * Key A: `0x160A91D29A9C`
 
@@ -52,7 +52,7 @@ Block 3 is set in the usual Mifare-specific way, with the following settings:
 
 ## Example
 
-Here's an example Mifare Classic card, sector-by-sector.
+Here's an example MIFARE Classic card, sector-by-sector.
 
 First, sector 0 contains the MAD:
 

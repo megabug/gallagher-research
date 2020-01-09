@@ -134,9 +134,9 @@ These are sent after a reader sends a keypad button press message.
 * `0xA3`: Keystroke ACK
 * `0xA5`: Beep
 
-#### Mifare key loading
+#### MIFARE key loading
 
-The Mifare key loader tool for Cardax IV readers sends `0xB1 0xC0 0xD5` followed by `0xE[n]` for each of 12 MF key nibbles.
+The MIFARE key loader tool for Cardax IV readers sends `0xB1 0xC0 0xD5` followed by `0xE[n]` for each of 12 MF key nibbles.
 
 * `0xB1`: Config MF key? 1
 * `0xC0`: Config MF key? 2

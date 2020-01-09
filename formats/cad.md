@@ -2,13 +2,13 @@
 
 ## Purpose
 
-The Gallagher system supports having multiple site-specific credentials encoded onto a single Mifare card.
+The Gallagher system supports having multiple site-specific credentials encoded onto a single MIFARE card.
 
-Mifare cards have the *[Mifare Application Directory](https://www.nxp.com/docs/en/application-note/AN10787.pdf)* (MAD), a NXP-defined standard for a per-card directory that allows each sector on the card to be identified. However, each sector can only be identified by a 2 byte *application ID* (Gallagher uses `0x4811` and `0x4812`). This does not allow an indication as to which sector contains which cardholder credential for a given site (region code (RC) and facility code (FC) pair).
+MIFARE cards have the *[MIFARE Application Directory](https://www.nxp.com/docs/en/application-note/AN10787.pdf)* (MAD), a NXP-defined standard for a per-card directory that allows each sector on the card to be identified. However, each sector can only be identified by a 2 byte *application ID* (Gallagher uses `0x4811` and `0x4812`). This does not allow an indication as to which sector contains which cardholder credential for a given site (region code (RC) and facility code (FC) pair).
 
 Hence, the Gallagher-specific *Card Application Directory* (CAD) exists. This directory takes up one of the sectors on the card and allows such a mapping of (RC, FC) to sector numbers to be held. This allows readers to quickly find which sector holds the cardholder credential for a given site without the need to read each sector, avoiding delays when a user presents a card to a reader for access.
 
-If you have access to Gallagher documentation, this is described (but the format not outlined) in the *Encoding Mifare Multiple Applications* document.
+If you have access to Gallagher documentation, this is described (but the format not outlined) in the *Encoding MIFARE Multiple Applications* document.
 
 
 ## Format
@@ -42,7 +42,7 @@ Lastly, the last 2 bytes are set to 0, completing blocks 0 - 2.
 
 ### Block 3
 
-Block 3 of the sector is set in the usual Mifare-specific way, with the following settings:
+Block 3 of the sector is set in the usual MIFARE-specific way, with the following settings:
 
 * Key A: `0xA0A1A2A3A4A5` (This is the same as the MAD's key A.)
 
@@ -57,7 +57,7 @@ Block 3 of the sector is set in the usual Mifare-specific way, with the followin
 
 ## Example
 
-Here's an example CAD dumped from a Mifare Classic Gallagher card:
+Here's an example CAD dumped from a MIFARE Classic Gallagher card:
 
 ```
 1B 58 00 01 C1 33 70 FD 13 38 0D 00 00 00 00 00

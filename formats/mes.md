@@ -1,10 +1,10 @@
-# Mifare Enhanced Security
+# MIFARE Enhanced Security
 
 ## Purpose
 
-*Mifare Enhanced Security* (MES) was introduced by Gallagher in an attempt to strengthen the security of Mifare Classic cards. At the time, attacks had been found on the Mifare Classic card, namely the [darkside attack](https://eprint.iacr.org/2009/137) and the [hardnested attack](http://www.cs.ru.nl/~rverdult/Ciphertext-only_Cryptanalysis_on_Hardened_Mifare_Classic_Cards-CCS_2015.pdf). MES was intended to counteract these in a limited way.
+*MIFARE Enhanced Security* (MES) was introduced by Gallagher in an attempt to strengthen the security of MIFARE Classic cards. At the time, attacks had been found on the MIFARE Classic card, namely the [darkside attack](https://eprint.iacr.org/2009/137) and the [hardnested attack](http://www.cs.ru.nl/~rverdult/Ciphertext-only_Cryptanalysis_on_Hardened_Mifare_Classic_Cards-CCS_2015.pdf). MES was intended to counteract these in a limited way.
 
-The MES encodes the same data as the normal [cardholder credential](cardholder/cardholder.md), but with some additional data, and is itself encrypted with a site-specific key, the *Mifare Enhanced Security Site Key* (note that this is not the same as the *Mifare Site Key*!).
+The MES encodes the same data as the normal [cardholder credential](cardholder/cardholder.md), but with some additional data, and is itself encrypted with a site-specific key, the *MIFARE Enhanced Security Site Key* (note that this is not the same as the *MIFARE Site Key*!).
 
 This encrypted blob of data protects against:
 
